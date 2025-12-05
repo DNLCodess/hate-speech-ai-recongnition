@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const HF_TOKEN = process.env.HF_TOKEN;
+    const HF_TOKEN = process.env.NEXT_PUBLIC_HF_TOKEN;
 
     const { text } = await request.json();
 
