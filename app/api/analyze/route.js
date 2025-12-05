@@ -31,14 +31,6 @@ export async function POST(request) {
 
     // Get Hugging Face API token
 
-    if (!HF_TOKEN) {
-      console.error("❌ API token not configured in environment variables");
-      return NextResponse.json(
-        { error: "API token not configured" },
-        { status: 500 }
-      );
-    }
-
     const model = "ProsusAI/finbert";
     console.log("🤖 Using model:", model);
 
