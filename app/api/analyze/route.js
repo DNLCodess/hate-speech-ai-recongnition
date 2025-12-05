@@ -28,7 +28,7 @@ export async function POST(request) {
     console.log("✅ Validation passed");
 
     // Get Hugging Face API token
-    const HF_TOKEN = "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";
+    const HF_TOKEN = process.env.HF_TOKEN;
 
     if (!HF_TOKEN) {
       console.error("❌ API token not configured in environment variables");
