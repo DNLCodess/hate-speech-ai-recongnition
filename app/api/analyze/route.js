@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
+    const HF_TOKEN = process.env.HF_TOKEN;
+
     const { text } = await request.json();
 
     // Validation
@@ -28,7 +30,6 @@ export async function POST(request) {
     console.log("✅ Validation passed");
 
     // Get Hugging Face API token
-    const HF_TOKEN = process.env.HF_TOKEN;
 
     if (!HF_TOKEN) {
       console.error("❌ API token not configured in environment variables");
